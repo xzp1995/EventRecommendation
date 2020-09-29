@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Sat Sep 19 16:05:37 CST 2020
+org.eclipse.jst.jee.server\:Tomcat=C\:\\Downloads\\apache-tomcat-9.0.37\\wtpwebapps\\Tomcat
+org.eclipse.jst.jee.server\:Jupiter=C\:\\Downloads\\apache-tomcat-9.0.37\\wtpwebapps\\Jupiter
