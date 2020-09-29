@@ -17,7 +17,6 @@ import org.json.JSONObject;
 
 import entity.Item;
 import entity.Item.ItemBuilder;
-import entity.TickerMasterObject;
 
 public class TicketMasterAPI {
 	private static final String URL = "https://app.ticketmaster.com/discovery/v2/events.json";
@@ -67,13 +66,6 @@ public class TicketMasterAPI {
 			
 			if (!obj.isNull("_embedded")) {
 				JSONObject embedded = obj.getJSONObject("_embedded");
-			    for (int i = 0; i < embedded.getJSONArray("events").length(); ++i) {
-			        JSONObject event = embedded.getJSONArray("events").getJSONObject(i);
-			        ObjectMapper objectMapper = new ObjectMapper();
-			        TickerMasterObject obj = objectMapper.readValue(event.toString(), TickerMasterObject.class);
-			        
-			        // build Item object from the TickerMasterObject instance 
-			     }
 			    return getItemList(embedded.getJSONArray("events"));
 			}
 		} catch (Exception e) {
